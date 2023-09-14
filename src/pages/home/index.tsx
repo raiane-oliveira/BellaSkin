@@ -37,7 +37,7 @@ export default function Home() {
       </div>
 
       <main>
-        <div className="overflow-hidden container bg-gray-neutral shadow-[0px_10px_50px_0px_rgba(160,160,160,0.10)] grid gap-px grid-cols-3 -mt-56 relative z-10 max-w-6xl w-full rounded-[0.625rem]">
+        <div className="overflow-hidden container bg-gray-200 shadow-[0px_10px_50px_0px_rgba(160,160,160,0.10)] grid gap-px grid-cols-3 -mt-56 relative z-10 max-w-6xl w-full rounded-[0.625rem]">
           <BoxFeatures icon={Eyebrow} feature="Design de Sobrancelhas" />
           <BoxFeatures icon={Nails} feature="Tratamento de Unhas" />
           <BoxFeatures icon={Lip} feature="Lip Blush Permanente" />
@@ -185,7 +185,7 @@ function BoxFeatures({ icon: Icon, feature, ...props }: BoxFeaturesProps) {
     <div
       {...props}
       className={twMerge(
-        'grid bg-white gap-7 text-center place-content-center place-items-center py-14 px-20',
+        'grid bg-white gap-7 text-center place-content-center place-items-center py-16 px-20',
         props.className,
       )}
     >
