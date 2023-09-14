@@ -1,0 +1,10 @@
+export * from './Cosmetics'
+export * from './Dough'
+export * from './Eyebrow'
+export * from './Lip'
+export * from './MakeUp'
+export * from './Nails'
+
+export { default as HightLight } from './highlight.svg'
+export { default as ArrowSpinning } from './arrow-spinning.svg'
+export { default as CircleBg } from './circle-bg.svg'
