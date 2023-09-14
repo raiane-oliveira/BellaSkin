@@ -92,7 +92,7 @@ export default function Home() {
           </div>
 
           <div className="mt-10">
-            <Line />
+            <Line className="mb-4" />
 
             <section className="grid grid-cols-2">
               <Texts.Heading className="col-span-full">

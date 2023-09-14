@@ -196,8 +196,8 @@ function BoxServices({
 
       <div className="absolute bottom-7 left-6">
         <strong className="text-[2rem] font-bold">{title}</strong>
-        <div className="flex items-end gap-2">
-          <Line className="h-[0.0625rem] translate-y-1 bg-white" />
+        <div className="flex items-center gap-2">
+          <Line className="h-[0.0625rem] bg-white" />
           <span className="text-white/60 text-lg flex-1">{category}</span>
         </div>
       </div>

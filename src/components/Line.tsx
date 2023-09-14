@@ -8,10 +8,7 @@ export function Line(props: LineProps) {
     <div
       {...props}
       aria-hidden
-      className={twMerge(
-        'bg-secondary h-[0.125rem] w-14 mb-4',
-        props.className,
-      )}
+      className={twMerge('bg-secondary h-[0.125rem] w-14', props.className)}
     />
   )
 }
