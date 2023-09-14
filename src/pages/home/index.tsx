@@ -33,11 +33,14 @@ export default function Home() {
           <Hero />
         </div>
 
-        <div className="bg-primary absolute -bottom-[53.75rem] -right-[37.5rem] blur-[400px] rounded-full w-[91rem] h-[91rem]" />
+        <div
+          aria-hidden
+          className="bg-primary absolute -bottom-[53.75rem] -right-[37.5rem] blur-[400px] rounded-full w-[91rem] h-[91rem]"
+        />
       </div>
 
       <main>
-        <div className="overflow-hidden container bg-gray-200 shadow-[0px_10px_50px_0px_rgba(160,160,160,0.10)] grid gap-px grid-cols-3 -mt-56 relative z-10 max-w-6xl w-full rounded-[0.625rem]">
+        <div className="overflow-hidden container max-md:hidden bg-gray-200 shadow-[0px_10px_50px_0px_rgba(160,160,160,0.10)] grid gap-px grid-cols-3 -mt-56 relative z-10 max-w-6xl w-full rounded-[0.625rem]">
           <BoxFeatures icon={Eyebrow} feature="Design de Sobrancelhas" />
           <BoxFeatures icon={Nails} feature="Tratamento de Unhas" />
           <BoxFeatures icon={Lip} feature="Lip Blush Permanente" />
@@ -52,7 +55,7 @@ export default function Home() {
 
         <div
           id="about"
-          className="max-w-[1440px] mx-auto flex items-center gap-10 pt-20 pr-16"
+          className="max-w-[1440px] mx-auto flex flex-col-reverse lg:flex-row items-center gap-10 pt-20 xl:pr-16 lg:pr-4"
         >
           <div className="relative overflow-hidden max-w-[53rem] w-full">
             <Image
@@ -60,12 +63,12 @@ export default function Home() {
               alt=""
               width={852}
               height={639}
-              className="object-cover"
+              className="object-cover min-h-[40rem] max-sm:min-h-max"
               quality={100}
             />
             <Image
               src={CircleBg}
-              className="absolute -bottom-14 -z-10 left-[48%] -translate-x-1/2 min-h-[35rem] min-w-[34rem]"
+              className="absolute -bottom-14 -z-10 left-[48%] -translate-x-1/2 min-h-[35rem] max-sm:min-h-max"
               aria-hidden
               alt=""
               width={553}
@@ -75,7 +78,7 @@ export default function Home() {
             <Image
               src={HightLight}
               alt=""
-              className="absolute top-16 left-64"
+              className="absolute top-16 left-64 max-sm:left-20 max-sm:w-10 max-sm:h-10"
               aria-hidden
               width={55}
               height={55}
@@ -84,7 +87,7 @@ export default function Home() {
             <Image
               src={ArrowSpinning}
               alt=""
-              className="absolute bottom-36 right-0"
+              className="absolute bottom-36 right-0 max-sm:w-24 max-sm:h-24"
               aria-hidden
               width={148}
               height={151}
@@ -92,9 +95,9 @@ export default function Home() {
           </div>
 
           <div className="mt-10">
-            <Line className="mb-4" />
+            <Line className="mb-4 max-lg:mx-auto" />
 
-            <section className="grid grid-cols-2">
+            <section className="grid grid-cols-2 max-sm:grid-cols-1 max-sm:gap-5 max-lg:place-items-center max-lg:max-w-xl max-lg:text-center max-lg:px-4">
               <Texts.Heading className="col-span-full">
                 Cuidar da beleza é essencial para sua{' '}
                 <span className="text-primary">autoestima!</span>
@@ -111,7 +114,7 @@ export default function Home() {
                 nossos serviços personalizados.
               </Texts.Description>
 
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col gap-5 max-sm:w-full max-sm:items-center">
                 <div className="flex items-center gap-3">
                   <CheckSquare
                     width={24}
@@ -137,7 +140,8 @@ export default function Home() {
                   <span className="text-lg">Toxina Botulínica</span>
                 </div>
               </div>
-              <div className="flex flex-col gap-5">
+
+              <div className="flex flex-col gap-5 max-sm:w-full max-sm:items-center">
                 <div className="flex items-center gap-3">
                   <CheckSquare
                     width={24}

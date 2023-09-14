@@ -10,8 +10,8 @@ import { Woman3, Woman4, Woman5 } from '@/assets/woman-applying-face-cream'
 
 export function Treatments() {
   return (
-    <div className="container bg- flex gap-11 items-center py-[5.75rem]">
-      <div className="max-w-lg">
+    <div className="container px-6 flex max-lg:flex-col-reverse max-lg:items-center max-lg:text-center gap-10 max-lg:gap-16 items-center py-[5.75rem]">
+      <div className="max-lg:max-w-3xl">
         <span className="text-primary text-2xl/normal font-roboto font-bold">
           Bem-estar
         </span>
@@ -26,15 +26,15 @@ export function Treatments() {
           radiante e rejuvenescida está ao seu alcance.
         </Texts.Description>
 
-        <div className="flex items-center gap-8">
-          <Button className="p-4">Conhecer Agora</Button>
+        <div className="flex flex-wrap items-center gap-8 max-lg:justify-center">
+          <Button className="p-4 whitespace-nowrap">Conhecer Agora</Button>
           <Button className="p-0 text-black shadow-none bg-transparent font-normal flex items-center gap-4">
             Ver Tratamentos <ArrowCircleDown size={40} weight="thin" />
           </Button>
         </div>
       </div>
 
-      <div className="pt-[1.875rem] pl-[1.875rem] relative">
+      <div className="pt-[1.875rem] pl-[1.875rem] relative max-sm:hidden">
         <SubtractGraphicEl className="absolute top-0 left-0" />
         <div className="relative grid p-2 grid-cols-[repeat(2,_max-content)] grid-rows-[max-content_max-content] gap-4">
           <Image

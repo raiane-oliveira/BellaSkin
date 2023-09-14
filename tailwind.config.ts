@@ -28,6 +28,32 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
+
+      keyframes: {
+        slideIn: {
+          from: {
+            transform: 'translateX(100%)',
+          },
+
+          to: {
+            transform: 'translateX(0)',
+          },
+        },
+
+        slideOut: {
+          to: {
+            transform: 'translateX(0)',
+          },
+          from: {
+            transform: 'translateX(100%)',
+          },
+        },
+      },
+
+      animation: {
+        slideIn: 'slideIn 300ms ease',
+        slideOut: 'slideOut 300ms ease',
+      },
     },
   },
   plugins: [],

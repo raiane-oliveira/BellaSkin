@@ -3,14 +3,14 @@ import { Button } from './Button'
 
 export function Footer() {
   return (
-    <footer className="bg-secondary pt-20">
+    <footer className="bg-secondary pt-20 px-6">
       <div className="container text-white flex flex-col">
-        <section className="flex px-6 justify-between items-center mb-[6.5rem]">
+        <section className="flex max-lg:flex-col gap-5 px-6 max-sm:px-0 justify-between items-center mb-10 sm:mb-[6.5rem]">
           <h3 className="text-gray-neutral-2 max-w-md text-heading-small leading-tight font-bold">
             Cadastre-se na nossa NewsLetter
           </h3>
 
-          <form className="bg-white max-w-md w-full flex items-center justify-between p-1">
+          <form className="sm:bg-white max-w-md max-sm:flex-col w-full flex gap-2 sm:items-center justify-between p-1">
             <input
               type="text"
               className="py-3 px-4 outline-0 placeholder:text-neutral text-secondary flex-1"
@@ -26,7 +26,7 @@ export function Footer() {
           </form>
         </section>
 
-        <div className="flex flex-wrap gap-20 pb-16 border-b border-white/20">
+        <div className="flex flex-wrap max-lg:justify-center max-sm:flex-col max-sm:px-0 justify-around gap-6 pb-16 border-b border-white/20">
           <div className="mr-7">
             <span className="text-[1.625rem] font-black">BellaSkin</span>
             <p className="text-sm/6 opacity-80 mt-7 max-w-[12rem]">
@@ -179,12 +179,12 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex items-center justify-between py-12">
+        <div className="flex items-center gap-4 flex-wrap-reverse justify-between py-12">
           <span className="text-sm font-bold opacity-80">
             Todos direitos reservados BellaSkin @2023
           </span>
 
-          <nav className="flex items-center gap-6">
+          <nav className="flex flex-wrap items-center gap-6">
             <Link
               href="#"
               className="text-sm opacity-80 transition-opacity hover:opacity-100 font-bold"

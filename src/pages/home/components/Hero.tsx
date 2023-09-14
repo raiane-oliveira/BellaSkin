@@ -9,8 +9,8 @@ import { WomanHero } from '@/assets'
 export function Hero() {
   return (
     <div className="pt-20">
-      <div className="flex text-white">
-        <section className="flex mt-16 flex-col gap-6">
+      <div className="flex max-lg:flex-col max-lg:gap-16 max-lg:text-center text-white">
+        <section className="flex mt-16 max-lg:px-6 lg:pl-6 max-lg:items-center flex-col gap-6 max-lg:max-w-3xl max-lg:mx-auto">
           <h1 className="relative text-heading leading-[4.375rem] font-extrabold">
             Sua beleza começa com uma pele saudável
             <svg
@@ -19,7 +19,7 @@ export function Hero() {
               height="27"
               viewBox="0 0 54 27"
               fill="none"
-              className="absolute w-12 h-7 -top-1 left-48"
+              className="absolute w-12 h-7 -z-10 -top-1 left-48"
             >
               <path
                 fill-rule="evenodd"
@@ -30,12 +30,12 @@ export function Hero() {
             </svg>
           </h1>
 
-          <Texts.Description>
+          <Texts.Description className="max-lg:max-w-lg">
             Descubra o segredo de uma pele radiante com nossos tratamentos e
             cuidados especializados.
           </Texts.Description>
 
-          <div className="flex mt-2 items-center gap-8">
+          <div className="flex mt-2 items-center gap-8 max-lg:flex-wrap max-lg:justify-center mx-auto lg:mx-0">
             <Button>Saiba Mais</Button>
             <Button className="p-0 bg-transparent font-normal flex items-center gap-4">
               Ver Tratamentos <ArrowCircleDown size={40} weight="thin" />
@@ -43,13 +43,13 @@ export function Hero() {
           </div>
         </section>
 
-        <div className="w-[60.5rem] h-[47.25rem] relative">
+        <div className="lg:w-[60.5rem] lg:h-[47.25rem] relative">
           <Image
             src={WomanHero}
             alt=""
             width={952}
             height={756}
-            className="object-cover w-full h-full relative z-10"
+            className="object-cover w-full h-full relative z-10 min-h-[30rem]"
             quality={100}
           />
 
@@ -69,7 +69,7 @@ function RectangleElement() {
       viewBox="0 0 614 373"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="absolute top-44 w-[36rem] min-h-[23rem]"
+      className="absolute top-64 lg:top-44 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 lg:w-[36rem] min-h-[23rem]"
     >
       <path
         d="M0 262.5C0 117.525 117.525 3.05176e-05 262.5 3.05176e-05H351.5C496.475 3.05176e-05 614 117.525 614 262.5V373H0V262.5Z"
@@ -94,7 +94,7 @@ function ArrowElement() {
       height="121"
       viewBox="0 0 161 121"
       fill="none"
-      className="absolute -right-20 top-48"
+      className="absolute lg:-right-20 top-48 right-6 max-sm:w-24 max-sm:h-24 max-sm:right-0"
     >
       <path
         opacity="0.5"

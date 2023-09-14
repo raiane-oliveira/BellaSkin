@@ -23,28 +23,36 @@ export function Services() {
       setCurrentSlide(slider.track.details.rel)
     },
     slides: {
-      perView: 'auto',
-      spacing: 30,
+      perView: 1,
+      spacing: 20,
     },
     created() {
       setIsSliderLoaded(true)
+    },
+    breakpoints: {
+      '(min-width: 630px)': {
+        slides: {
+          perView: 'auto',
+          spacing: 30,
+        },
+      },
     },
   })
 
   const endSlide =
     isSliderLoaded && instanceRef.current
-      ? instanceRef.current.track.details.slides.length - 2
+      ? instanceRef.current.track.details.slides.length - 1
       : 0
 
   const rateSlide = Math.min((currentSlide + 1) / endSlide, 1)
 
   return (
-    <div className="bg-secondary pt-28 pb-14" id="services">
+    <div className="bg-secondary pt-28 pb-14 pl-6" id="services">
       <div className="text-white">
         <div className="container mb-14">
           <Line className="bg-white mb-2" />
 
-          <div className="flex justify-between items-end">
+          <div className="flex flex-wrap gap-4 justify-between items-end">
             <Texts.Heading className="max-w-lg">
               Conheça <span className="text-primary">nossos principais</span>{' '}
               serviços para você
@@ -70,7 +78,7 @@ export function Services() {
               quality={100}
               src={Woman1}
               alt=""
-              className="h-full object-cover"
+              className="h-full w-full object-cover"
               width={558}
               height={434}
             />
@@ -87,6 +95,7 @@ export function Services() {
               alt=""
               width={362}
               height={434}
+              className="h-full w-full object-cover"
             />
           </BoxServices>
 
@@ -95,51 +104,24 @@ export function Services() {
             category="Pele"
             style={{ minWidth: 362, width: '100%' }}
           >
-            <Image quality={100} src={Woman2} alt="" width={362} height={434} />
-          </BoxServices>
-
-          <BoxServices
-            title="Hidratação Facial"
-            category="Rosto"
-            style={{ minWidth: 558, width: '100%' }}
-          >
             <Image
               quality={100}
-              src={Woman1}
+              src={Woman2}
               alt=""
-              className="h-full object-cover"
-              width={558}
-              height={434}
-            />
-          </BoxServices>
-
-          <BoxServices
-            title="Estética Corporal"
-            category="Corpo"
-            style={{ minWidth: 362, width: '100%' }}
-          >
-            <Image
-              quality={100}
-              src={WomanPerfil}
-              alt=""
+              className="h-full w-full object-cover"
               width={362}
               height={434}
             />
-          </BoxServices>
-
-          <BoxServices
-            title="Saúde da Pele"
-            category="Pele"
-            style={{ minWidth: 362, width: '100%' }}
-          >
-            <Image quality={100} src={Woman2} alt="" width={362} height={434} />
           </BoxServices>
         </div>
 
-        <div className="flex items-center mt-14 gap-3 container">
+        <div className="flex items-center mt-14 gap-3 container pr-6">
           {instanceRef.current && isSliderLoaded && (
-            <Texts.Description className="text-white/50">
-              <span className="text-white">01</span> de{' '}
+            <Texts.Description className="text-white/50 whitespace-nowrap max-sm:text-base">
+              <span className="text-white">
+                {String(currentSlide + 1).padStart(2, '0')}
+              </span>{' '}
+              de{' '}
               {String(instanceRef.current.track.details.slides.length).padStart(
                 2,
                 '0',

@@ -18,13 +18,13 @@ export function Testimonials() {
   return (
     <div className="bg-white">
       <div className="container py-28 flex flex-col gap-24">
-        <div className="flex items-center gap-[7.5rem] px-5">
+        <div className="flex max-lg:flex-col-reverse items-center gap-[7.5rem] px-5">
           <CardTestimonial img={person1} name="Roberta Ricci" numberStars={4}>
             Clinica excelente! Realiza transformações com responsabilidade e
             avaliação técnica! Super recomendo! Amei os resultados!
           </CardTestimonial>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 max-lg:items-center max-lg:text-center">
             <Line />
             <Texts.Heading className="font-bold">
               Confira o que nossos{' '}
@@ -88,7 +88,7 @@ export function Testimonials() {
           </div>
         </div>
 
-        <div className="flex items-center flex-wrap justify-between">
+        <div className="flex items-center overflow-x-auto gap-6 justify-between px-4">
           {partners.map((partner, index) => (
             <Image
               key={index}
@@ -97,6 +97,7 @@ export function Testimonials() {
               alt=""
               width={164}
               height={82}
+              className="min-w-[164px] max-lg:pb-4"
             />
           ))}
         </div>
